@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#fff8ec">
+    <meta name="description"
+          content="Belajar mengenal emosi dengan kartu emosi interaktif yang menyenangkan untuk anak-anak.">
+
+    <title>Kenali Emosimu! | Kartu Emosi Anak</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">🌈</span>
+                <span>Teman Emosi</span>
+            </a>
+
+            <div class="header-badge">
+                <span>⭐</span>
+                Belajar sambil bermain
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero container">
+
+            <div class="hero-text">
+                <span class="hero-label">HALO, TEMAN KECIL! 👋</span>
+
+                <h1>
+                    Yuk, Kenali
+                    <span class="highlight">Emosimu!</span>
+                </h1>
+
+                <p>
+                    Setiap perasaan itu istimewa.
+                    Ayo belajar mengenal perasaanmu dan
+                    bagaimana cara menghadapinya!
+                </p>
+
+                <a href="#kartu-emosi" class="btn-primary">
+                    Mulai Belajar
+                    <span>🚀</span>
+                </a>
+            </div>
+
+            <div class="hero-illustration">
+                <div class="hero-circle">
+                    <span class="hero-emoji">😊</span>
+                </div>
+
+                <span class="floating-emoji emoji-star">⭐</span>
+                <span class="floating-emoji emoji-heart">💖</span>
+                <span class="floating-emoji emoji-cloud">☁️</span>
+                <span class="floating-emoji emoji-rainbow">🌈</span>
+            </div>
+
+        </section>
+
+        <!-- Emotion Cards Section -->
+        <section class="emotion-section container" id="kartu-emosi">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">KARTU BELAJAR</span>
+
+                    <h2>
+                        Apa yang Kamu Rasakan?
+                        <span>💭</span>
+                    </h2>
+
+                    <p>
+                        Tekan kartu untuk mengenal lebih jauh
+                        tentang setiap emosi.
+                    </p>
+                </div>
+
+                <div class="card-counter">
+                    <span id="card-count">8</span>
+                    <span>Kartu Emosi</span>
+                </div>
+
+            </div>
+
+            <!-- Cards are rendered dynamically by JavaScript -->
+            <div class="emotion-grid" id="emotion-grid">
+                <!-- JavaScript renders the cards here -->
+            </div>
+
+        </section>
+
+        <!-- Educational Reminder -->
+        <section class="reminder-section container">
+
+            <div class="reminder-card">
+
+                <div class="reminder-icon">💖</div>
+
+                <div class="reminder-text">
+                    <h3>Semua Perasaan Itu Boleh!</h3>
+
+                    <p>
+                        Senang, sedih, marah, atau takut.
+                        Semua perasaan boleh kita rasakan.
+                        Yang penting, kita belajar mengungkapkannya
+                        dengan cara yang baik.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                Dibuat dengan 💖 untuk teman-teman kecil.
+            </p>
+
+            <span>
+                Belajar Emosi • Bermain • Bertumbuh
+            </span>
+        </div>
+    </footer>
+
+    <!-- Modal Detail Emosi -->
+    <section
+        class="modal"
+        id="emotion-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay" id="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modal-close"
+                aria-label="Tutup jendela"
+                type="button"
+            >
+                ✕
+            </button>
+
+            <!-- Modal Header -->
+            <div class="modal-header" id="modal-header">
+
+                <div class="modal-image-container" id="modal-image">
+                    <!-- Image or SVG placeholder -->
+                </div>
+
+                <div class="modal-title-container">
+
+                    <span class="modal-label">
+                        AYO BELAJAR EMOSI!
+                    </span>
+
+                    <h2 id="modal-title">Senang</h2>
+
+                    <button
+                        class="btn-speak"
+                        id="btn-speak"
+                        type="button"
+                    >
+                        🔊 Dengarkan
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <article class="detail-box detail-description">
+                    <div class="detail-icon">💡</div>
+
+                    <div>
+                        <h3>Apa itu emosi ini?</h3>
+
+                        <p id="modal-description"></p>
+                    </div>
+                </article>
+
+                <article class="detail-box detail-situation">
+                    <div class="detail-icon">🌟</div>
+
+                    <div>
+                        <h3>Kapan kita merasakannya?</h3>
+
+                        <p id="modal-situation"></p>
+                    </div>
+                </article>
+
+                <article class="detail-box detail-tips">
+                    <div class="detail-icon">🌱</div>
+
+                    <div>
+                        <h3>Apa yang bisa kita lakukan?</h3>
+
+                        <p id="modal-tips"></p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+
+                <p>
+                    Kamu hebat karena mau mengenal perasaanmu! 🌈
+                </p>
+
+                <button
+                    class="btn-finish"
+                    id="btn-finish"
+                    type="button"
+                >
+                    Aku Mengerti! 💖
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

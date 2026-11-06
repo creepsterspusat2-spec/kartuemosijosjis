@@ -1,0 +1,1460 @@
+
+/* =========================================
+   1. ROOT & GLOBAL STYLES
+========================================= */
+
+:root {
+    --background: #fffaf1;
+    --white: #ffffff;
+
+    --text-primary: #39364b;
+    --text-secondary: #77758b;
+
+    --primary: #7867e8;
+    --primary-dark: #6251d0;
+
+    --yellow: #ffe9a8;
+    --pink: #ffdae8;
+    --blue: #dceeff;
+    --green: #ddf6e7;
+    --purple: #e9e2ff;
+
+    --border-radius: 24px;
+    --shadow: 0 8px 25px rgba(65, 50, 100, 0.08);
+
+    --font: "Nunito", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--background);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
+
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 250, 241, 0.95);
+    border-bottom: 1px solid #f1e9dc;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.header-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+    border-radius: 50px;
+
+    background: #fff0c5;
+    color: #8b6c1c;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 400px;
+    padding: 45px 0 60px;
+
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-label {
+    display: inline-block;
+
+    padding: 8px 15px;
+    margin-bottom: 18px;
+
+    background: #e8e3ff;
+    color: #6e5ad4;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--primary);
+    display: block;
+}
+
+.hero-text p {
+    max-width: 480px;
+
+    color: var(--text-secondary);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 28px;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 50px;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    box-shadow: 0 8px 18px rgba(120, 103, 232, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-4px);
+}
+
+.hero-illustration {
+    flex: 0 0 350px;
+    height: 350px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-circle {
+    width: 270px;
+    height: 270px;
+
+    background: linear-gradient(135deg, #ffe5a9, #ffcfda);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 20px 50px rgba(255, 194, 165, 0.2);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-emoji {
+    font-size: 150px;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 40px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.emoji-star {
+    top: 20px;
+    right: 30px;
+}
+
+.emoji-heart {
+    bottom: 30px;
+    left: 20px;
+    animation-delay: 0.5s;
+}
+
+.emoji-cloud {
+    top: 50px;
+    left: 0;
+    animation-delay: 1s;
+}
+
+.emoji-rainbow {
+    bottom: 20px;
+    right: 15px;
+    animation-delay: 1.5s;
+}
+
+
+/* =========================================
+   4. EMOTION SECTION
+========================================= */
+
+.emotion-section {
+    padding: 30px 0 70px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+    gap: 20px;
+}
+
+.section-label {
+    display: block;
+
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: clamp(24px, 3vw, 35px);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-counter {
+    min-width: 110px;
+
+    padding: 16px 20px;
+
+    border-radius: 20px;
+    background: white;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-counter span:first-child {
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.card-counter span:last-child {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   5. EMOTION GRID & CARDS
+========================================= */
+
+.emotion-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.emotion-card {
+    position: relative;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    padding: 22px 15px;
+
+    background: var(--card-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    min-height: 260px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.emotion-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    top: -45px;
+    right: -45px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.emotion-card:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow:
+        0 15px 35px rgba(65, 50, 100, 0.15);
+}
+
+.emotion-card:active {
+    transform: scale(0.96);
+}
+
+.emotion-image {
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    overflow: hidden;
+
+    transition: transform 0.35s ease;
+}
+
+.emotion-card:hover .emotion-image {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.emotion-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 10px;
+}
+
+.emotion-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 85px;
+
+    user-select: none;
+}
+
+.emotion-name {
+    font-size: 21px;
+    font-weight: 900;
+
+    margin-bottom: 6px;
+
+    color: var(--text-primary);
+}
+
+.emotion-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: rgba(57, 54, 75, 0.7);
+
+    margin-bottom: 15px;
+}
+
+.card-action {
+    margin-top: auto;
+
+    padding: 9px 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    color: var(--text-primary);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    transition: 0.3s ease;
+}
+
+.emotion-card:hover .card-action {
+    background: white;
+    color: var(--primary);
+}
+
+
+/* =========================================
+   6. REMINDER SECTION
+========================================= */
+
+.reminder-section {
+    padding-bottom: 70px;
+}
+
+.reminder-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px 40px;
+
+    background: linear-gradient(135deg, #ffe4ed, #fff0ca);
+
+    border-radius: 30px;
+}
+
+.reminder-icon {
+    flex-shrink: 0;
+
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    font-size: 45px;
+}
+
+.reminder-text h3 {
+    font-size: 24px;
+    font-weight: 900;
+
+    margin-bottom: 8px;
+}
+
+.reminder-text p {
+    color: #77758b;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   7. FOOTER
+========================================= */
+
+.footer {
+    padding: 30px 0;
+
+    background: #f6edff;
+
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    font-weight: 900;
+
+    margin-bottom: 5px;
+}
+
+.footer span {
+    font-size: 12px;
+    font-weight: 700;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================
+   8. MODAL
+========================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(40, 35, 65, 0.55);
+
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1;
+
+    width: min(560px, 100%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(40px) scale(0.9);
+
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: var(--text-primary);
+
+    font-size: 18px;
+    font-weight: 900;
+
+    transition: 0.3s ease;
+}
+
+.modal-close:hover {
+    background: white;
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    padding: 35px 30px;
+
+    background: var(--modal-color);
+
+    border-radius: 30px 30px 0 0;
+}
+
+.modal-image-container {
+    width: 130px;
+    height: 130px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 8px;
+}
+
+.modal-image-container .emotion-placeholder {
+    font-size: 80px;
+}
+
+.modal-title-container {
+    flex: 1;
+}
+
+.modal-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    color: rgba(57, 54, 75, 0.65);
+}
+
+.modal-title-container h2 {
+    font-size: 35px;
+    font-weight: 900;
+
+    margin: 5px 0 15px;
+}
+
+.btn-speak {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: white;
+
+    color: var(--text-primary);
+
+    font-size: 13px;
+    font-weight: 900;
+
+    transition: 0.3s ease;
+}
+
+.btn-speak:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.modal-body {
+    padding: 25px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.detail-box {
+    display: flex;
+    gap: 15px;
+
+    padding: 18px;
+
+    border-radius: 20px;
+}
+
+.detail-description {
+    background: #fff8df;
+}
+
+.detail-situation {
+    background: #eaf4ff;
+}
+
+.detail-tips {
+    background: #e9f9ee;
+}
+
+.detail-icon {
+    flex-shrink: 0;
+
+    font-size: 25px;
+}
+
+.detail-box h3 {
+    font-size: 15px;
+    font-weight: 900;
+
+    margin-bottom: 7px;
+}
+
+.detail-box p {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #77758b;
+
+    line-height: 1.8;
+}
+
+.modal-footer {
+    padding: 0 30px 30px;
+
+    text-align: center;
+}
+
+.modal-footer p {
+    font-size: 12px;
+    font-weight: 800;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 15px;
+}
+
+.btn-finish {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    transition: 0.3s ease;
+}
+
+.btn-finish:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   9. ANIMATIONS
+========================================= */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================================
+   10. RESPONSIVE DESIGN
+========================================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .emotion-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .hero-illustration {
+        flex-basis: 280px;
+        height: 280px;
+    }
+
+    .hero-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero-emoji {
+        font-size: 120px;
+    }
+
+    .emotion-image {
+        width: 125px;
+        height: 125px;
+    }
+
+    .emotion-placeholder {
+        font-size: 75px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        font-size: 25px;
+    }
+
+    .header-badge {
+        font-size: 10px;
+        padding: 8px 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 30px 0 45px;
+
+        gap: 20px;
+    }
+
+    .hero-illustration {
+        flex: none;
+
+        width: 100%;
+        height: 230px;
+    }
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-emoji {
+        font-size: 110px;
+    }
+
+    .hero-text p {
+        margin-inline: auto;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .emotion-section {
+        padding-bottom: 45px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    .card-counter {
+        min-width: 75px;
+        padding: 12px;
+    }
+
+    .card-counter span:first-child {
+        font-size: 25px;
+    }
+
+    .card-counter span:last-child {
+        font-size: 10px;
+    }
+
+    .emotion-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .emotion-card {
+        min-height: 225px;
+        padding: 15px 10px;
+
+        border-radius: 20px;
+    }
+
+    .emotion-image {
+        width: 115px;
+        height: 115px;
+    }
+
+    .emotion-placeholder {
+        font-size: 70px;
+    }
+
+    .emotion-name {
+        font-size: 17px;
+    }
+
+    .emotion-subtitle {
+        font-size: 10px;
+    }
+
+    .card-action {
+        font-size: 10px;
+        padding: 8px 15px;
+    }
+
+    .reminder-card {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 25px 20px;
+
+        gap: 15px;
+    }
+
+    .reminder-text h3 {
+        font-size: 20px;
+    }
+
+    .reminder-text p {
+        font-size: 12px;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        border-radius: 25px;
+        max-height: 92vh;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 30px 20px 25px;
+
+        gap: 15px;
+    }
+
+    .modal-image-container {
+        width: 110px;
+        height: 110px;
+    }
+
+    .modal-title-container h2 {
+        font-size: 30px;
+    }
+
+    .modal-body {
+        padding: 20px 15px;
+        gap: 12px;
+    }
+
+    .detail-box {
+        padding: 15px;
+    }
+
+    .detail-box h3 {
+        font-size: 13px;
+    }
+
+    .detail-box p {
+        font-size: 12px;
+    }
+
+    .modal-footer {
+        padding: 0 15px 20px;
+    }
+}
+
+
+/* Small mobile */
+@media (max-width: 360px) {
+
+    .header-badge {
+        display: none;
+    }
+
+    .emotion-grid {
+        gap: 10px;
+    }
+
+    .emotion-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .emotion-placeholder {
+        font-size: 60px;
+    }
+
+    .emotion-name {
+        font-size: 15px;
+    }
+}
+
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =========================================
+   11. GAMBAR EKSPRESI BESAR + ANIMASI
+========================================= */
+
+/* ---------- Animasi khas tiap emosi ---------- */
+
+.emo-senang   { --img-anim: anim-senang;   --img-dur: 1.1s; }
+.emo-sedih    { --img-anim: anim-sedih;    --img-dur: 3s;   --fx-anim: fx-fall; }
+.emo-marah    { --img-anim: anim-marah;    --img-dur: .7s;  --fx-anim: fx-beat; }
+.emo-takut    { --img-anim: anim-takut;    --img-dur: .5s;  --fx-anim: fx-fall; }
+.emo-terkejut { --img-anim: anim-terkejut; --img-dur: 1.6s; --fx-anim: fx-beat; }
+.emo-jijik    { --img-anim: anim-jijik;    --img-dur: 1.4s; }
+.emo-bangga   { --img-anim: anim-bangga;   --img-dur: 1.5s; }
+.emo-malu     { --img-anim: anim-malu;     --img-dur: 2.4s; }
+
+/* ---------- Kartu: gambar lebih besar ---------- */
+
+.emotion-card {
+    min-height: 335px;
+    padding: 26px 15px 22px;
+
+    /* Animasi masuk (backwards: tidak mengunci transform saat hover) */
+    animation: card-in .6s cubic-bezier(.34, 1.56, .64, 1) backwards;
+    animation-delay: calc(var(--i, 0) * .07s);
+}
+
+.emotion-image {
+    position: relative;
+
+    width: 190px;
+    height: 190px;
+
+    margin-bottom: 16px;
+
+    overflow: visible;
+
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, .35);
+}
+
+.emotion-image img {
+    padding: 4px;
+
+    border-radius: 50%;
+
+    transform-origin: 50% 60%;
+
+    /* Gerak "bernapas" saat diam, bergantian antar kartu */
+    animation: breathe 4s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * -.5s);
+}
+
+/* Saat disentuh/di-hover: animasi sesuai emosinya */
+.emotion-card:hover .emotion-image img,
+.emotion-card:focus-visible .emotion-image img {
+    animation-name: var(--img-anim);
+    animation-duration: var(--img-dur, 1.2s);
+    animation-delay: 0s;
+}
+
+/* ---------- Partikel emoji ---------- */
+
+.fx {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+
+    z-index: 3;
+
+    font-size: 26px;
+    line-height: 1;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation-name: none;
+    animation-duration: 2.6s;
+    animation-delay: var(--delay, 0s);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.emotion-card:hover .fx,
+.emotion-card:focus-visible .fx,
+.modal-image-container .fx {
+    animation-name: var(--fx-anim, fx-float);
+}
+
+/* ---------- Modal: gambar besar di tengah ---------- */
+
+.modal-header {
+    flex-direction: column;
+    text-align: center;
+
+    gap: 22px;
+
+    padding: 45px 30px 30px;
+}
+
+.modal-image-container {
+    position: relative;
+
+    width: 240px;
+    height: 240px;
+
+    overflow: visible;
+
+    box-shadow:
+        0 0 0 10px rgba(255, 255, 255, .35),
+        0 18px 40px rgba(60, 50, 100, .15);
+}
+
+.modal-figure {
+    width: 100%;
+    height: 100%;
+
+    animation: image-pop .8s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+.modal-image-container img {
+    padding: 6px;
+
+    border-radius: 50%;
+
+    transform-origin: 50% 60%;
+
+    animation-name: var(--img-anim);
+    animation-duration: var(--img-dur, 1.2s);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+}
+
+.modal-title-container {
+    flex: none;
+}
+
+.modal-title-container h2 {
+    font-size: 38px;
+
+    animation: title-rise .6s ease .15s backwards;
+}
+
+/* Cincin suara saat audio diputar */
+.modal-image-container::before {
+    content: "";
+
+    position: absolute;
+    inset: -12px;
+
+    border: 5px solid rgba(255, 255, 255, .95);
+    border-radius: 50%;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.modal.speaking .modal-image-container::before {
+    animation: speak-ring 1.4s ease-out infinite;
+}
+
+.btn-speak.is-speaking {
+    background: var(--text-primary, #39364b);
+    color: #fff;
+
+    animation: speak-pulse 1.2s ease-in-out infinite;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes card-in {
+    from { opacity: 0; transform: translateY(35px) scale(.85); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes image-pop {
+    0%   { opacity: 0; transform: scale(.3) rotate(-12deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes title-rise {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes breathe {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50%      { transform: translateY(-5px) scale(1.04); }
+}
+
+/* Senang: melompat riang */
+@keyframes anim-senang {
+    0%, 100% { transform: translateY(0) scale(1.05, .95); }
+    40%      { transform: translateY(-16px) scale(.97, 1.05) rotate(-4deg); }
+    70%      { transform: translateY(-4px) scale(1.02) rotate(4deg); }
+}
+
+/* Sedih: menunduk dan bergoyang pelan */
+@keyframes anim-sedih {
+    0%, 100% { transform: translateY(4px) rotate(-3deg) scale(.97); }
+    50%      { transform: translateY(10px) rotate(3deg) scale(.95); }
+}
+
+/* Marah: gemetar dan menggembung */
+@keyframes anim-marah {
+    0%, 100% { transform: translateX(0) rotate(0) scale(1.04); }
+    20%      { transform: translateX(-6px) rotate(-2deg) scale(1.08); }
+    40%      { transform: translateX(6px) rotate(2deg) scale(1.04); }
+    60%      { transform: translateX(-5px) rotate(-1.5deg) scale(1.08); }
+    80%      { transform: translateX(5px) rotate(1.5deg) scale(1.04); }
+}
+
+/* Takut: gemetar cepat */
+@keyframes anim-takut {
+    0%, 100% { transform: translate(0, 0) scale(.96); }
+    25%      { transform: translate(-3px, 2px) scale(.96) rotate(-1.5deg); }
+    50%      { transform: translate(3px, -2px) scale(.97); }
+    75%      { transform: translate(-2px, -1px) scale(.96) rotate(1.5deg); }
+}
+
+/* Terkejut: melonjak lalu mengembang */
+@keyframes anim-terkejut {
+    0%, 55%, 100% { transform: translateY(0) scale(1); }
+    62%           { transform: translateY(-18px) scale(1.18); }
+    72%           { transform: translateY(0) scale(.94); }
+    82%           { transform: translateY(-5px) scale(1.05); }
+}
+
+/* Jijik: goyang miring */
+@keyframes anim-jijik {
+    0%, 100% { transform: rotate(-8deg) translateX(-4px) scale(.97); }
+    50%      { transform: rotate(8deg) translateX(4px) scale(.97); }
+}
+
+/* Bangga: dada membusung, berdenyut */
+@keyframes anim-bangga {
+    0%, 100% { transform: scale(1) rotate(0); }
+    30%      { transform: scale(1.12) rotate(-4deg) translateY(-6px); }
+    60%      { transform: scale(1.08) rotate(4deg) translateY(-3px); }
+}
+
+/* Malu: menunduk dan memiringkan kepala */
+@keyframes anim-malu {
+    0%, 100% { transform: rotate(-6deg) translateY(4px) scale(.96); }
+    50%      { transform: rotate(7deg) translateY(8px) scale(.94); }
+}
+
+/* Partikel */
+@keyframes fx-float {
+    0%   { opacity: 0; transform: translateY(14px) scale(.5) rotate(0); }
+    25%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-38px) scale(1.15) rotate(18deg); }
+}
+
+@keyframes fx-fall {
+    0%   { opacity: 0; transform: translateY(-14px) scale(.8); }
+    25%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(42px) scale(1); }
+}
+
+@keyframes fx-beat {
+    0%, 100% { opacity: 0; transform: scale(.4); }
+    30%      { opacity: 1; transform: scale(1.35) rotate(-10deg); }
+    60%      { opacity: 1; transform: scale(1) rotate(8deg); }
+}
+
+@keyframes speak-ring {
+    0%   { opacity: .9; transform: scale(.95); }
+    100% { opacity: 0;  transform: scale(1.22); }
+}
+
+@keyframes speak-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+
+    .emotion-image {
+        width: 165px;
+        height: 165px;
+    }
+
+    .emotion-card {
+        min-height: 305px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .emotion-card {
+        min-height: 255px;
+        padding: 18px 10px 16px;
+    }
+
+    .emotion-image {
+        width: 132px;
+        height: 132px;
+
+        margin-bottom: 12px;
+    }
+
+    .fx {
+        font-size: 20px;
+    }
+
+    .modal-header {
+        gap: 18px;
+
+        padding: 38px 20px 25px;
+    }
+
+    .modal-image-container {
+        width: 195px;
+        height: 195px;
+    }
+
+    .modal-title-container h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .emotion-image {
+        width: 112px;
+        height: 112px;
+    }
+
+    .modal-image-container {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* Aksesibilitas: matikan gerak berulang jika diminta pengguna */
+@media (prefers-reduced-motion: reduce) {
+
+    .emotion-card,
+    .emotion-image img,
+    .modal-image-container img,
+    .modal-figure,
+    .modal-title-container h2,
+    .modal-image-container::before,
+    .btn-speak.is-speaking,
+    .fx {
+        animation: none !important;
+    }
+
+    .fx {
+        display: none;
+    }
+}
